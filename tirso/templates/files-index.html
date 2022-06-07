@@ -1,0 +1,74 @@
+{%extends 'base.html'%}
+{% block navbar %}
+
+<nav class="navbar navbar-custom navbar-expand-lg ">
+    <a class="navbar-brand" href="#">
+        <img src="/static/img/logo.png" width="200" height="40" class="d-inline-block align-top" alt="">
+    </a>
+    <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item active">
+            <a class="nav-link" href="/files_index">DATA CHECK<span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item ">
+            <a class="nav-link " href="/master_data">MASTER DATA</a>
+          </li>
+         
+        </ul>
+        
+    </div>
+    <ul class="navbar-nav">
+      {% if user.is_authenticated %}
+      <li class="nav-item ">
+        <a class="nav-link">USER: {{user.username}}</a>
+      </li>
+      <li class="nav-item ">
+        
+        <a class="nav-link" href="{% url 'logout' %}">| LOGOUT</a>
+
+      </li>
+      {%endif%}
+    </ul>
+</nav>
+{% endblock navbar %}
+
+
+{%block content %}
+<div>
+    <br />
+    <dive class="nav-link">
+      <a href="/upload_file" class="btn btn-primary " role="button" aria-pressed="true">+ AJOUTER un fichier</a>
+    </dive>
+    <br /><br />
+    <dive>
+      <table class="table table-bordered" id="example">
+          <thead class="table-success" >
+              <tr>
+                  <th>N°</th>
+                  <th>NOM DE FICHIER</th>
+                  <th>Date Création</th>
+                  <th>Action</th>
+              </tr>
+
+          </thead>
+
+          {% for files in files_list  %}
+          <tr>
+              <td>{{files.id}}</td>
+              <td>{{files.title}}</td>
+              <td>{{files.created|date:"d/m/Y H:i"}}</td>
+              <td>
+                <a href="/delete/{{files.id}}" class="btn btn-danger btn-sm" onclick="return confirm('Êtes-vous sûr de vouloir supprimer');"><i class="fa fa-trash"></i></a>
+                <a href="/check/{{files.id}}" class="btn btn-info btn-sm"><i class="fa fa-edit"></i></a>
+              </td>
+          </tr>
+          {% endfor %}
+          <!-- Data from back-end -->
+
+      </table>
+    </div>
+</div> <!-- End container -->
+
+<br /><br />
+
+{% endblock content%}

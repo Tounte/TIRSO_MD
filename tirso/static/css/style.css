@@ -1,0 +1,171 @@
+/*----------------------------------------------------------------
+
+# START CONFIGURATION
+
+----------------------------------------------------------------*/
+
+html,
+body{
+    height: 100%;
+    margin: 0;
+    max-width:100%;
+
+}
+
+
+
+
+
+
+/*----------------------------------------------------------------
+
+# FOOTER
+
+----------------------------------------------------------------*/
+
+/* Modify the background color */
+.navbar-custom {
+    background-color: #417690;
+    height: 40px;
+}
+.nav-link{
+    color: #d3e264;
+    font-weight: bold;
+}
+
+.nav-link:hover{
+    color: #000000;
+}
+
+.navbar-nav > .active > a { 
+    background-color: #d3e264 ; 
+    color: #417690;
+}
+
+.wrapper{
+    min-height: 80%;
+    margin-bottom: -50px;
+}
+
+#footer,
+.push{
+    height: 50px;  
+}
+
+.form-inline{
+    align-items: right;
+}
+footer{
+    margin-top:20px;
+    position:sticky;
+    top:100%;
+    width:100%;
+   
+    height:50px;
+}
+
+
+/*---------------------------------------------------------------
+# TABLE BORDER Custom
+----------------------------------------------------------------*/
+.table{
+    background-color: #f8f8f8;
+}
+.table-success{
+    color: #1b71ad;
+}
+
+.dataTables_wrapper{
+    margin-right: 30px;
+    margin-left: 30px;
+}
+
+
+
+/*----------------------------------------------------------------
+
+# Custom Pagination
+
+----------------------------------------------------------------*/
+
+.page-item.active .page-link {
+    columns: #fff;
+    background-color: #6c757d ;
+    border: 1px solid #6c757d ;
+}
+
+.pagination > li > a {
+    background-color:#fff;
+    color: #6c757d;
+    
+}
+
+.pagination > li > a:focus,
+.pagination > li > a:hover,
+.pagination > span > a:focus,
+.pagination > span > a:hover {
+    color: #111;
+    background-color: #d3d3d3 ;
+    border: 1px solid #6c757d ;
+    box-shadow: none;
+}
+
+
+/*----------------------------------------------------------------
+
+# Custum DATATABLES
+
+----------------------------------------------------------------*/
+
+
+
+/* Pagination */
+.dataTables_paginate {
+    margin-top: -30px !important;
+}
+
+/* Input Search */
+.dataTables_filter {
+    float: right;
+    margin-bottom: 10px !important;
+    margin-right: 50px;
+}
+
+/* Input lenght */
+.dataTables_length {
+    float: right !important;
+    margin-bottom: -30px !important;
+}
+
+.bt-button{
+    float: right !important;
+
+}
+.bt-secondary{
+    background-color: #417690 !important;
+}
+
+.table{
+    padding:0%;
+}
+
+table.dataTable td {
+    font-size: 0.9em;
+  }
+
+  table.dataTable tr {
+    text-align: center;
+    font-size: 0.9em;
+  }
+
+table.dataTable tr.odd { background-color:  rgb(254, 252, 252); }
+table.dataTable tr.even { background-color: rgb(234, 236, 234);  }
+
+.btn-group-sm{
+    margin-left: 5 px;
+    margin-right: 5 px
+}
+
+
+
+
